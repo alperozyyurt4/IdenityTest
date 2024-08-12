@@ -132,7 +132,7 @@ public class AccountController : ControllerBase
             {
                 new Claim(ClaimTypes.Name, user.UserName),
                 new Claim("id", user.Id),
-                new Claim(ClaimTypes.Role, user.Role) // Rol bilgisini ekleyin
+                new Claim(ClaimTypes.Role, user.Role) 
             }),
             Expires = DateTime.UtcNow.AddHours(1),
             Issuer = _configuration["Jwt:Issuer"],
